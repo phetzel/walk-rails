@@ -1,5 +1,4 @@
 class Api::WalksController < ApplicationController
-    class Api::WalksController < ApplicationController
     def index
         @walks = Walk.all 
         render json: @walks
