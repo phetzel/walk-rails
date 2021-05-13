@@ -14,7 +14,7 @@ class Api::WalksController < ApplicationController
         if @walk.save 
             render json: @walk
         else 
-            render json: @release.errors.full_messages, status: 422
+            render json: @walk.errors.full_messages, status: 422
         end 
     end 
 
