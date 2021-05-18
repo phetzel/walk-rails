@@ -11,8 +11,8 @@ class Api::LatLngsController < ApplicationController
     private 
     def lat_lng_params
         params.require(:lat_lng).permit(
-            :lat,
-            :lng,
+            :latitude,
+            :longitude,
             :walk_id,
             :num,
         )
