@@ -28,7 +28,8 @@ class Api::WalksController < ApplicationController
         params.require(:walk).permit(
             :user_id,
             :distance,
-            :time
+            :time,
+            :activity
         )
     end
 end
