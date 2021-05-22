@@ -9,7 +9,7 @@
 Walk.destroy_all
 
 DISTANCES = [44, 33, 44, 22, 11, 10, 9, 8]
-TIMES = ['12:34:56', '23:45:12', '00:23:45', '00:12:34', '00:00:12']
+TIMES = ['123', '345', '678', '987', '1234']
 ACTIVITIES = ['walk', 'run', 'roller-skate', 'star']
 
 x = 1
