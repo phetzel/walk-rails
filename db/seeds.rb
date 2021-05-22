@@ -19,7 +19,7 @@ while x <= 40
         user_id: 3,
         distance: DISTANCES.sample,
         time: TIMES.sample,
-        activity: ACTIVITIES.sample
+        activity: ACTIVITIES.sample,
         created_at: x.days.ago
     )
 
