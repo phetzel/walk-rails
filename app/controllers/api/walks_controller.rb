@@ -1,6 +1,6 @@
 class Api::WalksController < ApplicationController
     def index
-        @walks = Walk.where(user_id: params[:user_id]) 
+        @walks = Walk.where(user_id: params[:user_id])
         render json: @walks
     end 
 
