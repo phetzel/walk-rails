@@ -14,7 +14,7 @@ class Api::WalksController < ApplicationController
         end
 
         if params[:page]
-            @walks = @walks.limit(8).offset(params[:page] * 8)
+            @walks = @walks.limit(8).offset(params[:page].to_i * 8)
         end
 
         render json: @walks
