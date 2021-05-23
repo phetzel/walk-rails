@@ -13,6 +13,10 @@ class Api::WalksController < ApplicationController
             @walks = @walks.where(activity: params[:activity] )
         end
 
+        if params[:page]
+            @walks = @walks.limit(8).offset(params[:page] * 8)
+        end
+
         render json: @walks
     end 
 
@@ -42,7 +46,8 @@ class Api::WalksController < ApplicationController
             :distance,
             :time,
             :activity,
-            :date
+            :date,
+            :page
         )
     end
 end
