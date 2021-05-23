@@ -10,7 +10,7 @@ Walk.destroy_all
 
 DISTANCES = [44, 33, 44, 22, 11, 10, 9, 8]
 TIMES = ['123', '345', '678', '987', '1234']
-ACTIVITIES = ['walk', 'run', 'roller-skate', 'star']
+ACTIVITIES = ['walk', 'bike', 'roller-skate', 'star']
 
 x = 1
 while x <= 40
