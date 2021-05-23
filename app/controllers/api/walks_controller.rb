@@ -10,7 +10,7 @@ class Api::WalksController < ApplicationController
         end
 
         if params[:activity] 
-            @walks = @walks.where(activity: activity)
+            @walks = @walks.where(activity: params[:activity] )
         end
 
         render json: @walks
