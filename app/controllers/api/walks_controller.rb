@@ -1,15 +1,16 @@
 class Api::WalksController < ApplicationController
     def index
+        @walks = Walk.where(user_id: params[:user_id])
         if params[:date] == 'month'
-            @walks = Walk
-                .where(user_id: params[:user_id])
+            @walks = @walks
                 .where('created_at >= ?', 31.day.ago.to_datetime)
         elsif params[:date] == 'week'
-            @walks = Walk
-                .where(user_id: params[:user_id])
+            @walks = @walks
                 .where('created_at >= ?', 7.day.ago.to_datetime)
-        else 
-            @walks = Walk.where(user_id: params[:user_id])
+        end
+
+        if params[:activity] 
+            @walks = @walks.where(activity: activity)
         end
 
         render json: @walks
